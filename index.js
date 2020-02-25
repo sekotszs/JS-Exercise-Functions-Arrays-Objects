@@ -201,7 +201,16 @@ function getCarInfoById(inventory,number) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-}
+  return inventory.sort(function(a,b){
+  let compare =0
+  if (a.car_model > b.car_model){
+    compare=1
+  } else if (a.car_model< b.car_model){
+    compare= -1
+  }
+  return compare
+  })}
+
 
 /**
  * ### Challenge `getModelYears`
